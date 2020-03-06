@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS="/users/amjad/SecretKey/Synclarity-9776378de904.json"

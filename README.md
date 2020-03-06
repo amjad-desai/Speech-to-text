@@ -1,3 +1,2 @@
-# Speech-to-text
-
-Convert speech to text using different API. Works well for long audio files (Asynchronous).
+# pystuff
+my personal Python Codes &amp; projects 

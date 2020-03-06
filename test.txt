@@ -1,0 +1,7 @@
+This video I want to show you how to create a splash screen with a
+loading a progress bar so let's get started so I already have my
+splash screen and my homepage design in place what you want to do is
+add the loading text and the progress bar on a splash screen TV
+animation and then jump to my homescreen so let's see how we can do
+that so I'm in the design. Right now let me just zoom in to my splash
+screen can you buy just double-click on the out
