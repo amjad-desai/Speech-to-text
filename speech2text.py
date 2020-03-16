@@ -5,7 +5,7 @@ from google.cloud import speech
 from google.cloud.speech import enums
 
 output_filepath = "Transcripts/"
-file_name  = "AE001"
+file_name  = "counter"
 storage_uri = 'gs://grapheast/speech2text/{}.flac'.format(file_name)
 
 def gc_long_running_recognize(storage_uri):
@@ -20,7 +20,7 @@ def gc_long_running_recognize(storage_uri):
     client = speech.SpeechClient()
 
     # Sample rate in Hertz of the audio data sent
-    sample_rate_hertz = 24000
+    sample_rate_hertz = 48000
 
 
     # The language of the supplied audio
@@ -28,7 +28,7 @@ def gc_long_running_recognize(storage_uri):
     model = "default"
     use_enhanced = True
     enable_word_time_offsets = True
-    phrases = ["In this Tutorial","image carousel","Press alt and drag","nitisi"]
+    phrases = ["In this Tutorial","image carousel","Press alt and drag"]
     #boost = 2
     #speech_contexts_element = {"phrases": phrases,"boost": boost}
     speech_contexts_element = {"phrases": phrases}
@@ -72,5 +72,5 @@ def write_transcripts(transcript_filename,transcript):
 
 if __name__ == "__main__":
     transcript = gc_long_running_recognize(storage_uri)
-    transcript_filename = 'Transcripts/AE001.txt'
+    transcript_filename = 'Transcripts/{}.txt'.format(file_name)
     write_transcripts(transcript_filename,transcript)
